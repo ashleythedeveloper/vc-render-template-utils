@@ -49,13 +49,6 @@ jobs:
           fi
           echo "new_version=$new_version" >> $GITHUB_OUTPUT
 
-      - name: Set release version for changelog
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git commit --allow-empty -m "chore: release ${{ steps.retrieve_version.outputs.new_version }}" -m "Release-As: ${{ steps.retrieve_version.outputs.new_version }}"
-          git push
-
       - name: Create release changelog
         id: release
         uses: googleapis/release-please-action@v4
@@ -64,3 +57,4 @@ jobs:
           target-branch: ${{ github.ref_name }}
           config-file: .github/workflows/release-please-config.json
           manifest-file: .github/workflows/.release-please-manifest.json
+          release-type: node

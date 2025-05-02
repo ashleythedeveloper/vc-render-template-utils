@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2025-05-02)
+
+
+### Miscellaneous Chores
+
+* release 1.0.0 ([07e3b4b](https://github.com/ashleythedeveloper/vc-render-template-utils/commit/07e3b4bb00c6fade9b9fcab4fc7845681d03937a))
+
 ## [1.0.0](https://github.com/pyx-industries/vc-render-template-utils/compare/v1.0.0...v1.0.0) (2025-04-29)
 
 
